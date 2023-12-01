@@ -7,10 +7,16 @@ namespace WebSindicato.Models
     {
         [Key]
         public int Id { get; set; }
-        [Required]
+        [Required, MinLength(5), MaxLength(50)]
         public string? Email { get; set; }
-        [Required]
+        [Required, MinLength(5), MaxLength(50)]
         public string? Password { get; set; }
+        [Required, MinLength(5), MaxLength(30)]
+        public string Nombre { get; set; }
+        [Required]
         public RolEnum? Rol { get; set; }
+
+        //Relations
+        public virtual List<Pago>? Paids { get; set; }
     }
 }

@@ -10,5 +10,7 @@ namespace WebSindicato.Context
         }
 
         public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Chofer> Chofer { get; set; }
+        public DbSet<Pago> Pago { get; set; }
     }
 }

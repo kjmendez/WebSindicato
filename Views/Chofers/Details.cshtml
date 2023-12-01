@@ -1,0 +1,50 @@
+﻿@model WebSindicato.Models.Chofer
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Chofer</h4>
+    <hr />
+    <div class="row">
+        <div class="col-sm-4">
+            @if (Model.Photo != null)
+            {
+                <img src="~/photos/@Model.Photo" class="img-thumbnail" width="150px" />
+            }
+        </div>
+        <div class="col-sm-8">
+            <dl class="row">
+                <dt class = "col-sm-2">
+                    @Html.DisplayNameFor(model => model.Ci)
+                </dt>
+                <dd class = "col-sm-10">
+                    @Html.DisplayFor(model => model.Ci)
+                </dd>
+                <dt class = "col-sm-2">
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+                <dd class = "col-sm-10">
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+                <dt class = "col-sm-2">
+                    @Html.DisplayNameFor(model => model.Photo)
+                </dt>
+                <dd class = "col-sm-10">
+                    @Html.DisplayFor(model => model.Photo)
+                </dd>
+            </dl>
+        </div>
+    </div>
+    
+
+
+    
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
